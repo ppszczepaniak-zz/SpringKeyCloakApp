@@ -37,9 +37,6 @@ public class DemoController {
                 "<font size=\"5\">" +
                 "<p>Welcome user.</p>\n" +
                 "<p>Click <a href=\"http://127.0.0.1:8081/logout\">here</a> to logout.</p>" +
-//                "<form action=\"http://127.0.0.1:8081/logout2\" method=\"post\">    " +
-//                "<p>Click <a href=\"http://127.0.0.1:8081/logout2\">here</a> to logout.</p>" +
-//                "</form>" +
                 "</font>" +
                 "</center>";
     }
@@ -49,7 +46,7 @@ public class DemoController {
         request.logout();
         return "<center>" +
                 "<font size=\"8\">" +
-                "<p>LOGGED OUT</p>\n" +
+                "<p>EXIT PAGE</p>\n" +
                 "</font>" +
                 "<font size=\"5\">" +
                 "<p>You've been logged out.</p>\n" +
