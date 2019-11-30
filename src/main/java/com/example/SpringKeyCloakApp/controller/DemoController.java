@@ -1,14 +1,11 @@
 package com.example.SpringKeyCloakApp.controller;
 
-import org.keycloak.KeycloakSecurityContext;
-import org.keycloak.authorization.client.util.Http;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 
 @RestController
 public class DemoController {
@@ -28,14 +25,14 @@ public class DemoController {
     }
 
     @GetMapping(value = "/users")
-    public String user(
+    public String user(Principal principal
     ) {
         return "<center>" +
                 "<font size=\"8\">" +
                 "<p>USER PAGE</p>\n" +
                 "</font>" +
                 "<font size=\"5\">" +
-                "<p>Welcome user.</p>\n" +
+                "<p>Welcome " + principal.getName() + ".</p>\n" +
                 "<p>Click <a href=\"http://127.0.0.1:8081/logout\">here</a> to logout.</p>" +
                 "</font>" +
                 "</center>";
@@ -56,11 +53,11 @@ public class DemoController {
     }
 
     //---------------------------- TESTING DIFFERRENT APPROACH BELOW -----------------------------------
-    //        //  getKeycloakSecurityContext().getToken()
-    //    private KeycloakSecurityContext getKeycloakSecurityContext() {
-    //        return (KeycloakSecurityContext) request.getAttribute(KeycloakSecurityContext.class.getName());
-    //    }
-
+//              getKeycloakSecurityContext().getToken().
+//        private KeycloakSecurityContext getKeycloakSecurityContext() {
+//            return (KeycloakSecurityContext) request.getAttribute(KeycloakSecurityContext.class.getName());
+//        }
+//
 
     //    //TODO other logout in progress...
     //    private String logoutString = "client_id=SpringKeyCloakApp&refresh_token=" +
