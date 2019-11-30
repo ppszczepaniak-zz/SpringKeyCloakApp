@@ -58,7 +58,7 @@ public class DemoController {
                 "</center>";
     }
 
-    //---------------------------- TESTING BELOW -----------------------------------
+    //---------------------------- TESTING DIFFERRENT APPROACH BELOW -----------------------------------
     //        //  getKeycloakSecurityContext().getToken()
     //    private KeycloakSecurityContext getKeycloakSecurityContext() {
     //        return (KeycloakSecurityContext) request.getAttribute(KeycloakSecurityContext.class.getName());
