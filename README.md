@@ -1,2 +1,2 @@
 # SpringKeyCloakApp
-demo app for using Spring app with KeyCloak authorisation
+demo app for using Spring app with KeyCloak authorization
